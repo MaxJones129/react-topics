@@ -1,6 +1,7 @@
 "use client"
 
 import React, { useEffect, useState } from 'react';
+import Counter from '../../components/Counter';
 
 export default function Hooks() {
   const [stateHook, setStateHook] = useState('State Hook Default Value');
@@ -13,5 +14,8 @@ export default function Hooks() {
     return () => clearTimeout(timer);
   }, []);
 
-  return <div>{stateHook}</div>;
+  return  <div>
+            {stateHook}
+            <Counter initialCount={100} />  
+          </div>;
 }
